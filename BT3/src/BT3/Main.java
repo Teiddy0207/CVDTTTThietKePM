@@ -3,17 +3,14 @@ package BT3;
 public class Main {
 
 	public static void main(String[] args) {
-        ProductFactory factory = new SimpleProductFactory();
-        Product product = factory.createProduct("DongHoCasioMTP", 56);
+		ProductFactory dongHoFactory = new DongHoFactory();
+        Product dongHo = dongHoFactory.createProduct("Casio100", 15);
 
-        InventoryManager manager = new InventoryManager();
-        InventoryLogger logger = new InventoryLogger();
+        ProductFactory vongTayFactory = new VongTayFactory();
+        Product vongTay = vongTayFactory.createProduct("DawlingWinton", 1000);
 
-        manager.updateInventory(product, 2); 
-        logger.logInventoryChange(product); 
-
-        manager.updateInventory(product, -7); 
-        logger.logInventoryChange(product);   
+        System.out.println("Đồng hồ: " + dongHo.getProductId() + ", Số lượng: " + dongHo.getQuantity());
+        System.out.println("Vòng tay: " + vongTay.getProductId() + ", Số lượng: " + vongTay.getQuantity());
     }
 
 }

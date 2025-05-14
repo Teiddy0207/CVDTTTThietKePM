@@ -1,6 +1,5 @@
 package BT3;
 
-public interface ProductFactory {
-    Product createProduct(String productId, int quantity);
+public abstract class ProductFactory {
+    public abstract Product createProduct(String id, int quantitty);
 }
-
