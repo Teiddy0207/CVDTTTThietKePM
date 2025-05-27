@@ -1,5 +1,5 @@
 package BT7;
 
-public class Product {
-
+public interface  Product {
+	 void displayInfo();
 }
