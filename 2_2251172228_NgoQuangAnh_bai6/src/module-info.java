@@ -4,5 +4,5 @@
 /**
  * 
  */
-module Lab07 {
+module Bai7 {
 }
